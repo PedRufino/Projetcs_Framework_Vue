@@ -1,47 +1,47 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+  export default {
+    name: 'App',
+    data() {
+      return {
+        nomes: [
+          { 'id': 1, 'nome': 'João', 'idade':15},
+          { 'id': 2, 'nome': 'Maria', 'idade':18},
+          { 'id': 3, 'nome': 'José', 'idade':8},
+          { 'id': 4, 'nome': 'Kalliel', 'idade':41},
+          { 'id': 5, 'nome': 'Pedro', 'idade':23},
+          { 'id': 6, 'nome': 'Paulo', 'idade':45},
+          { 'id': 7, 'nome': 'Ana', 'idade':11},
+          { 'id': 8, 'nome': 'Julia', 'idade':13},
+          { 'id': 9, 'nome': 'Jaqueline', 'idade':74},
+          { 'id': 10, 'nome': 'Carlos', 'idade':20},
+        ],
+        titulo: '<b>Lista de Nomes</b>'
+      }
+    }
+  }
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <h1 v-html="titulo"></h1>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NOME</th>
+          <th scope="col">IDADE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(nom,index) in nomes" :key="index">
+          <td>{{ nom.id }}</td>
+          <td>{{ nom.nome }}</td>
+          <td>{{ nom.idade }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+<style>
 </style>
