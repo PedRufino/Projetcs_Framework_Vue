@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-### Compilar e otimizada para Produção
+### Compila e otimiza para Produção
 
 ```sh
 npm run build
