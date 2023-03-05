@@ -3,6 +3,7 @@ Neste repositório está uma série de exercícios utilizando o Vue, um framewor
 
 ## Configurações para o funcionamento dos projetos
 
+\* Dentro do projeto execute os comandos a baixo para o funcionamento do mesmo<br>
 ```sh
 npm install
 ```
