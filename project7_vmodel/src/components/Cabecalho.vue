@@ -4,23 +4,27 @@
             {{ titulo }}
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light hg-light">
-
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">Navbar</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </nav>
     </div>
 </template>
 
 <script>
-    export default{
-        name:'cabecalho',
-        data(){
-            return{
-                titulo: 'Exemplo de Cabeçalho'
-            }
+export default {
+    name: 'cabecalho',
+    data() {
+        return {
+            titulo: 'Exemplo de Cabeçalho'
         }
     }
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
