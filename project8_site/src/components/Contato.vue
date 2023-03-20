@@ -1,109 +1,95 @@
 <template>
-    <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-4">
-            <label for="validationCustom01" class="form-label">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-        </div>
-        <div class="col-md-4">
-            <label for="validationCustom02" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-        </div>
-        <div class="col-md-4">
-            <label for="validationCustomUsername" class="form-label">Username</label>
-            <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
-                    required>
-                <div class="invalid-feedback">
-                    Please choose a username.
+    <div class="row" style="margin-left: 100px; margin-right: 100px; margin-top: 10rem;">
+        <img class="col-6" style="padding: 0 !important;" src="https://mangakun.com/wp-content/uploads/2023/02/Como-ler-manga.webp" alt="">
+        <form class="form-control col needs-validation" novalidate>
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">
+                        Parece bom!
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom02" class="form-label">Sobrenome:</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                    <div class="valid-feedback">
+                        Parece bom!
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustomUsername" class="form-label">Nome de usuário:</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                            required>
+                        <div class="invalid-feedback">
+                            Escolha um nome de usuário.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                        Forneça uma cidade válida.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom04" class="form-label">Estado:</label>
+                    <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecione um estado válido.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom05" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Forneça um CEP válido.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Concordo com os termos e condições
+                        </label>
+                        <div class="invalid-feedback">
+                            Você deve concordar antes de enviar.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <label for="validationCustom03" class="form-label">City</label>
-            <input type="text" class="form-control" id="validationCustom03" required>
-            <div class="invalid-feedback">
-                Please provide a valid city.
-            </div>
-        </div>
-        <div class="col-md-3">
-            <label for="validationCustom04" class="form-label">State</label>
-            <select class="form-select" id="validationCustom04" required>
-                <option selected disabled value="">Choose...</option>
-                <option>...</option>
-            </select>
-            <div class="invalid-feedback">
-                Please select a valid state.
-            </div>
-        </div>
-        <div class="col-md-3">
-            <label for="validationCustom05" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="validationCustom05" required>
-            <div class="invalid-feedback">
-                Please provide a valid zip.
-            </div>
-        </div>
-        <div class="col-12">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before submitting.
-                </div>
-            </div>
-        </div>
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-export default defineComponent({
-    name: 'Contato',
-});
-// Validação Form
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-    'use strict'
+    import { defineComponent } from 'vue';
+    export default defineComponent({
+        name: 'Contato',
+    });
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-
-            form.classList.add('was-validated')
-        }, false)
-    }, false)
-})()
-// (function () {
-//     'use strict';
-//     window.addEventListener('load', function () {
-//         var forms = this.document.getElementsByClassName('.needs-validation');
-//         var validation = Array.prototype.filter.call(forms, function (form) {
-//             form.addEventListener('submit', function (event) {
-//                 if (form.checkValidity() === false) {
-//                     event.preventDefault();
-//                     event.stopPropagation();
-//                 }
-//                 form.classList.add('was-validated');
-//             }, false);
-//         });
-//     }, false);
-// })();
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = this.document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
 </script>

@@ -7,7 +7,7 @@
                 nome: 'Pedro Neto'
             }
         }
-    })
+    });
 </script>
 
 <template>
@@ -42,3 +42,9 @@
         </div>
     </footer>
 </template>
+
+<style>
+    footer{
+        bottom: -16.4rem;
+    }
+</style>

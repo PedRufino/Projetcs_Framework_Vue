@@ -1,14 +1,23 @@
 <template>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
+    <div id="carouselExample" class="carousel col slide">
+        <div class="carousel-inner" style="text-align: center;">
             <div class="carousel-item active">
-                <img src="http://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" class="d-block w-100" alt="...">
+                <div class="destaque-wrap" style="background-color: #1C9ED0;">
+                    <img src="https://static3.mangalivre.net/destaques/P9eeqB7OlsoilfoguY3S_Q/6938/ijiranaide-nagaroto.png"
+                        class="" alt="...">
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="https://img.freepik.com/fotos-premium/a-imagem-do-cerebro-humano_99433-294.jpg" class="d-block w-100" alt="...">
+                <div class="destaque-wrap" style="background-color: #DF474A;">
+                    <img src="https://static3.mangalivre.net/destaques/oH1IK8L7aCFOYXAlwB_x8Q/1392/boruto.png" class=""
+                        alt="...">
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="https://s2.glbimg.com/h3Duok3KWVA8yaIOzZZIESkNLC4DKPsVVGWWhNMHhpNIoz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2013/08/02/imagem_para_sexta_51.jpg" class="d-block w-100" alt="...">
+                <div class="destaque-wrap" style="background-color: #A4C5BE;">
+                    <img src="https://static3.mangalivre.net/destaques/OtwUr3uvLkq81dSfgVMpcw/8103/spyxfamily.png" class=""
+                        alt="...">
+                </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -23,8 +32,20 @@
 </template>
 
 <script>
-    import { defineComponent } from 'vue';
-    export default defineComponent({
-        name: 'Carousel',
-    })
+import { defineComponent } from 'vue';
+export default defineComponent({
+    name: 'Carousel',
+});
 </script>
+
+<style>
+.destaque-wrap {
+    background-color: #cacaca;
+    background-image: url(https://mangalivre.net/assets/images/layout/destaque-pattern.png);
+    background-repeat: repeat;
+    box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, .5), inset 0 -5px 10px 0 rgba(0, 0, 0, .25);
+    text-align: center;
+    width: 100%;
+}
+
+</style>
