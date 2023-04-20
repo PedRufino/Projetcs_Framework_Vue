@@ -16,4 +16,10 @@ export default defineComponent({
         margin-top: 8px;
         margin-right: 20px;
     }
+
+    @media only screen and (max-width: 990px) {
+        .test{
+            margin-right: 0;
+        }
+    }
 </style>
