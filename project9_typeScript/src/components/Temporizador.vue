@@ -1,8 +1,8 @@
 <template>
     <div class="m-flex-etec center-etec aling-items-sm-center">
         <div class="btn-sm m1">
-            <Crono/>
-            {{ tempo_seg }}
+            <Crono :tempo_seg="tempo_seg"/>
+            <!-- {{ tempo_seg }} -->
         </div>
         <div class="mx-auto">
             <button class="btn btn-success btn-sm m-1" @click="iniciar" :disabled="timerAtivo">
