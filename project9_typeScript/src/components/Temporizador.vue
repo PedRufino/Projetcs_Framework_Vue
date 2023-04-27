@@ -30,6 +30,7 @@ import { defineComponent } from 'vue';
 import Crono from "./Crono.vue";
 export default defineComponent({
     name: 'Temporizador',
+    emits: ['TimerFinalizado'],
     data(){
         return{
             tempo_seg: 0,
@@ -51,6 +52,8 @@ export default defineComponent({
             // console.log('Botão Parar Clicado');
             clearInterval(this.timer);
             this.timerAtivo = false
+            this.$emit('TimerFinalizado', this.tempo_seg)
+            this.tempo_seg = 0
         }
     },
     components: { Crono }

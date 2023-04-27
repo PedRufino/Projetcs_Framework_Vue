@@ -2,10 +2,11 @@
   import logo from './assets/images.png'
   import { defineComponent } from 'vue';
   import Tarefas from './components/Tarefas.vue';
+  import TarefaN from './components/TarefaN.vue';
 
   export default defineComponent({
       name: "App",
-      components: {Tarefas},
+      components: {Tarefas, TarefaN},
       data(){
         return{
           logo:logo,
@@ -23,6 +24,9 @@
     </div>
     <div class="col-lg-10 bg-light">
       <Tarefas/>
+      <div>
+        <TarefaN/>
+      </div>
     </div>
   </main>
 </template>
