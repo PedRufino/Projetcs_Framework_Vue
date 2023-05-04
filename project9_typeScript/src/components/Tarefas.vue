@@ -21,6 +21,7 @@ import Temporizador from "./Temporizador.vue";
 export default defineComponent({
     name: 'Tarefas',
     components:{ Temporizador },
+    emits:['SalvarLista'],
     data(){
         return{
             descricaoTarefa:''
@@ -28,8 +29,10 @@ export default defineComponent({
     },
     methods:{
         TarefaFinal(tempoTarefa:number) : void{
-            console.log('Tempo da tarefa', tempoTarefa)
-            console.log('Descrição da tarefa', this.descricaoTarefa)
+            // console.log('Tempo da tarefa', tempoTarefa)
+            // console.log('Descrição da tarefa', this.descricaoTarefa)
+            this.$emit('SalvarLista',{duracaoEmSeg: tempoTarefa,
+            descricao:this.descricaoTarefa})
             this.descricaoTarefa='' //limpar a var
         }
     }

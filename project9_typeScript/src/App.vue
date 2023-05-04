@@ -3,6 +3,7 @@
   import { defineComponent } from 'vue';
   import Tarefas from './components/Tarefas.vue';
   import TarefaN from './components/TarefaN.vue';
+import type iTarefaN from './interface/iTarefaN';
 
   export default defineComponent({
       name: "App",
@@ -10,7 +11,13 @@
       data(){
         return{
           logo:logo,
-          nome: "Pedro Neto"
+          nome: "Pedro Neto",
+          listaTarefas: [] as iTarefaN[]
+        }
+      },
+      methods:{
+        SalvarLista(itemtarefa:iTarefaN){
+          this.listaTarefas.push(itemtarefa)
         }
       }
   })
@@ -23,9 +30,9 @@
       <h4 class="title-nome">{{ nome }}</h4>
     </div>
     <div class="col-lg-10 bg-light">
-      <Tarefas/>
+      <Tarefas @SalvarLista="SalvarLista"/>
       <div>
-        <TarefaN/>
+        <TarefaN v-for="(itemTarefa, index) in listaTarefas" :key="index" :itemTarefa="itemTarefa"/>
       </div>
     </div>
   </main>
