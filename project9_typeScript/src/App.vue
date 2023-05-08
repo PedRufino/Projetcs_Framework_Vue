@@ -60,12 +60,4 @@
     top: 0;
     left: 0;
   }
-
-  .logo-size{
-    width: 200px;
-  }
-
-  .title-nome{
-    text-align: center;
-  }
 </style>

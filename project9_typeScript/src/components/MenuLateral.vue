@@ -1,7 +1,7 @@
 <template>
     <div class="row text-center">
-        <div class="col-lg-12"><img :src="logo" alt=""></div>
-        <div class="col-lg-12"><h4 :nome="nome">{{nome}}</h4></div>
+        <div class="col-lg-12"><img class="logo-size" :src="logo" alt=""></div>
+        <div class="col-lg-12"><h4 class="title-nome" :nome="nome">{{nome}}</h4></div>
         <div class="col-lg-12">
             <button class="btn btn-outline-secondary">
                 Modo Noturno
@@ -20,3 +20,13 @@
     })
 
 </script>
+
+<style>
+.logo-size{
+width: 200px;
+}
+
+.title-nome{
+text-align: center;
+}
+</style>
