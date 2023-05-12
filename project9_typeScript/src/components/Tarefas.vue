@@ -1,5 +1,5 @@
 <template>
-    <div class="row card p-1">
+    <div class="row card p-1 tarefas">
         <div class="col-lg-12 row">
             <div class="col-lg-8" role="form" aria-label="Formulario de Tarefas">
                 <input type="text" name="" id="" class="form-control" placeholder="Tarefa"
@@ -38,3 +38,10 @@ export default defineComponent({
     }
 })
 </script>
+
+<style>
+.tarefas{
+    color: var(--texto-padrao) !important;
+    background: var(--bg-padrao) !important;
+}
+</style>

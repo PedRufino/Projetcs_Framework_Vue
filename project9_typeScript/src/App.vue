@@ -15,7 +15,8 @@
         return{
           logo:logo,
           nome: "Pedro Neto",
-          listaTarefas: [] as iTarefaN[]
+          listaTarefas: [] as iTarefaN[],
+          modoNoturno:false,
         }
       },
       computed:{
@@ -26,17 +27,21 @@
       methods:{
         SalvarLista(itemtarefa:iTarefaN){
           this.listaTarefas.push(itemtarefa)
+        },
+        trocarTemaApp(modoNoturno: boolean){
+          this.modoNoturno = modoNoturno
         }
-      }
+      },
   })
 </script>
 
 <template>
-  <main class="row">
+  <main class="row" :class="{ 'modo-noturno':modoNoturno }">
     <div class="col-lg-2 bg-info">
-      <MenuLateral :nome="nome" :logo="logo"/>
+      <MenuLateral @eTrocarTema="trocarTemaApp" :nome="nome" :logo="logo"/>
     </div>
-    <div class="col-lg-10 bg-light">
+    <!-- <div class="col-lg-10 bg-light"> -->
+    <div class="col-lg-10 box">
       <Tarefas @SalvarLista="SalvarLista"/>
       <div>
         <TarefaN v-for="(itemTarefa, index) in listaTarefas" :key="index" :itemTarefa="itemTarefa"/>
@@ -50,14 +55,27 @@
 
 <style>
   #app{
-    max-width: 2100 !important;
+    max-width: 2100px !important;
     width: 100% !important;
     padding: 0 !important;
     margin: 0 auto !important;
-    height: 800px;
+    height: 930px;
     grid-template-columns: 1fr !important;
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  main{
+    --bg-padrao: #F2F2F2;
+    --texto-padrao: #000;
+    --bg-card: #895397;
+  }
+  main.modo-noturno{
+    --bg-padrao: #000028;
+    --texto-padrao: #fff;
+  }
+  .box{
+    background-color: var(--bg-padrao);
   }
 </style>
