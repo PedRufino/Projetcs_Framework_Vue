@@ -1,5 +1,5 @@
 <template>
-    <div class="card my-1">
+    <div class="card my-1 card-taref">
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-10"><small>{{ itemTarefa.descricao || 'Tarefa sem Descrição'}}</small></div>
@@ -24,3 +24,13 @@ export default defineComponent({
     }
 })
 </script>
+
+<style>
+.card-taref{
+    color: var(--texto-padrao) !important;
+    background: var(--bg-card) !important;
+}
+.my-1{
+    margin-right: 1rem !important;
+}
+</style>

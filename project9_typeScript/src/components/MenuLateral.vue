@@ -1,6 +1,6 @@
 <template>
     <div class="row text-center">
-        <div class="col-lg-12"><img class="logo-size" :src="logo" alt=""></div>
+        <div class="col-lg-12"><div class="logo-size"></div></div>
         <div class="col-lg-12"><h4 class="title-nome" :nome="nome">{{nome}}</h4></div>
         <div class="col-lg-12">
             <button class="btn btn-outline-secondary" @click="trocarTema">
@@ -43,10 +43,18 @@
 
 <style>
 .logo-size{
-width: 200px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: var(--img-menu);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    vertical-align: middle;
 }
 
 .title-nome{
-text-align: center;
+    text-align: center;
+    color: var(--texto-padrao);
 }
 </style>

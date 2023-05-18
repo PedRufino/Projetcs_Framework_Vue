@@ -37,7 +37,7 @@
 
 <template>
   <main class="row" :class="{ 'modo-noturno':modoNoturno }">
-    <div class="col-lg-2 bg-info">
+    <div class="col-lg-2 menu-color">
       <MenuLateral @eTrocarTema="trocarTemaApp" :nome="nome" :logo="logo"/>
     </div>
     <!-- <div class="col-lg-10 bg-light"> -->
@@ -69,13 +69,21 @@
   main{
     --bg-padrao: #F2F2F2;
     --texto-padrao: #000;
-    --bg-card: #895397;
+    --bg-card: #55a6b8;
+    --bg-menu: #00eeff;
+    --img-menu: url(../src/assets/images.png);
   }
   main.modo-noturno{
     --bg-padrao: #000028;
     --texto-padrao: #fff;
+    --bg-card: #322c8e;
+    --bg-menu: #1c1855;
+    --img-menu: url(../src/assets/images2.png);
   }
   .box{
     background-color: var(--bg-padrao);
+  }
+  .menu-color{
+    background-color: var(--bg-menu);
   }
 </style>
