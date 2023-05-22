@@ -19,7 +19,7 @@
 
     export default defineComponent({
         name: "App",
-        components: {Tarefas, TarefaN, Card},
+        components: { Tarefas, TarefaN, Card },
         data(){
             return{
                 listaTarefas: [] as iTarefaN[],
