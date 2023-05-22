@@ -42,13 +42,14 @@
     </div>
     <!-- <div class="col-lg-10 bg-light"> -->
     <div class="col-lg-10 box">
-      <Tarefas @SalvarLista="SalvarLista"/>
+      <!-- <Tarefas @SalvarLista="SalvarLista"/>
       <div>
         <TarefaN v-for="(itemTarefa, index) in listaTarefas" :key="index" :itemTarefa="itemTarefa"/>
       </div>
       <Card v-if="tarefaVazia" class="p-2">
         Sem Tarefas Definidas
-      </Card>
+      </Card> -->
+      <router-view></router-view>
     </div>
   </main>
 </template>
