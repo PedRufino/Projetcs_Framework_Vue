@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="form-control" v-if="loading==false">
+        <form class="form-control w-50" v-if="loading==false">
             <label>CEP:</label>
             <p><input class="form-control" type="text" v-model="dados.cep" v-on:keyup.enter="buscaDados(dados)"/></p>
             <label>Logradouro:</label>
@@ -40,7 +40,7 @@ export default defineComponent({
             }
         }
     }
-})
+});
 </script>
 
 <style>
